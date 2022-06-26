@@ -6,6 +6,7 @@
   --second-alpha-color: rgba(20, 25, 45, 0.75);
   --third-color: #501464;
   --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --app-working: rgba(51, 169, 4, 0.75);
   --white-color: #fff;
   --gray-light-color: #f3f3f3;
   --gray-color: #ccc;
@@ -19,6 +20,9 @@
   --font: 'Raleway', sans-serif;
   --max-width: 1200px;
   --header-height: 4rem;
+}
+.working {
+  background-color: var(--app-working);
 }
 
 /* ********** Reset ********** */
@@ -322,7 +326,6 @@ p {
   .menu a {
     padding: 0 1rem;
     font-size: 1rem;
-
   }
   .menu a:last-child {
     padding-right: 0;
@@ -553,7 +556,7 @@ progress::-moz-progress-bar {
 .portfolio-card img {
   width: 100%;
   height: 70%;
-  max-height:100%;
+  max-height: 100%;
   margin: auto 0;
 
   /* object-fit: cover;*/
@@ -576,6 +579,9 @@ progress::-moz-progress-bar {
 .portfolio-card:hover .portfolio-card-info {
   opacity: 1;
   pointer-events: auto;
+}
+.portfolio-card:hover .portfolio-card-info.working {
+  background-color: var(--app-working);
 }
 .portfolio-card-info > div {
   padding: 1rem;
@@ -604,7 +610,7 @@ progress::-moz-progress-bar {
 .portfolio-details {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-auto-rows: 2rem;
+  grid-auto-rows: 1.2rem;
 }
 .portfolio-details b {
   color: var(--first-color);
@@ -660,7 +666,7 @@ progress::-moz-progress-bar {
   } /*movil:columna (vertical) y desktop:fila (horizontal)*/
   .portfolio-info {
     margin-left: 1rem;
-    align-self: center; /*alinea vertical a él mismo*/
+    align-self: flex-start; /*alinea vertical a él mismo*/
   }
   .services > .container {
     /*"container" es el padre del <h2> y <articles cards>*/
